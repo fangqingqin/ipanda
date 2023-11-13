@@ -171,13 +171,15 @@
                 <div class="job-ad-container">
                     <!-- Resume Text Area -->
                     <h2 style="color: #ffffff;">Copy Paste Your Resume Here</h2>
-                    <textarea id="resume-textbox" name="resume" class="form-control" rows="10" style="width: 100%; max-width: 100%;" placeholder="Paste your resume here..."></textarea>
+                    <textarea id="resume-textbox" name="resume" class="form-control" rows="10" style="width: 100%; max-width: 100%;" placeholder="Paste your resume here..." required></textarea>
 
                     <!-- Job Description Text Area -->
                     <h2 style="color: #ffffff;">Copy Paste Your Job Description Here</h2>
                     <div class="d-flex align-items-center w-100" style="margin-top: 20px;">
                         <div class="mr-2" style="color: #ffffff;">job_1</div>
-                        <textarea id="job-description-textbox-1" name="job_description" class="form-control" rows="5" style="width: 100%; max-width: 100%;" placeholder="Everything on the job ad..."></textarea>
+                        
+                        <!-- <input type="text" class="form-control" id="job-description-textbox-1" name="job_description" placeholder="Enter Your Name" required> -->
+                        <textarea id="job-description-textbox-1" name="job_description" class="form-control" rows="5" style="width: 100%; max-width: 100%;" placeholder="Everything on the job ad..." required></textarea>
                     </div>
                     
                 </div>
@@ -189,11 +191,11 @@
                 <div class="btn-toolbar mt-3" role="toolbar" aria-label="Toolbar with button groups">
                     <div class="btn-group mr-2" role="group" aria-label="First group">
                         <!-- Add more jobs button -->
-                        <button type="button" onclick="addJobAd()" class="add-more-jobs">+ Add More Job Ads</button>
+                        <button type="submit" onclick="addJobAd()" class="add-more-jobs">+ Add More Job Ads</button>
                     </div>
                     <div class="btn-group" role="group" aria-label="Second group">
                         <!-- Submit button -->
-                        <button type="button" onclick="submitResume()" class="btn btn-primary">Apply</button>
+                        <button type="submit" onclick="submitResume()" class="btn btn-primary">Apply</button>
                     </div>
                 </div>
 
