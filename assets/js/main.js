@@ -268,3 +268,87 @@ document.addEventListener('DOMContentLoaded', (event) => {
     };
 });
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var resumeInput = document.getElementById('resume-textbox');
+    var jobAdsInputs = document.querySelectorAll('.job-ad-input');
+    var generateButton = document.querySelector('.generate');
+
+    function checkInputs() {
+        console.log("checkInputs");
+
+        var isResumeFilled = resumeInput.value.trim() !== '';
+        var isOneJobAdFilled = Array.from(jobAdsInputs).some(input => input.value.trim() !== '');
+        console.log(isOneJobAdFilled);
+        console.log(isResumeFilled);
+        if (isResumeFilled && isOneJobAdFilled) {
+            console.log("isResumeFilled && isOneJobAdFilled");
+            console.log(document.getElementById('generate'));
+            document.getElementById("generate").style.opacity = 1;
+            document.getElementById("generate").disabled = false;
+            
+        } else {
+            document.getElementById("generate").style.opacity = 0.2;
+            document.getElementById("generate").disabled = true;
+        }
+    }
+
+    resumeInput.addEventListener('input', checkInputs);
+
+    jobAdsInputs.forEach(function(input) {
+        input.addEventListener('input', checkInputs);
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var previewButton = document.querySelector('.sample-preview-button');
+    
+    previewButton.addEventListener('click', function() {
+        window.location.href = 'sample.html'; 
+    });
+});
+
+
+// on generate click, process to payment
+document.addEventListener('DOMContentLoaded', function() {
+    var previewButton = document.querySelector('.generate');
+    
+    previewButton.addEventListener('click', function() {
+        payment()
+    });
+});
+
+async function payment(){
+    console.log("generate, process to payment");
+}
+
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+
+export default async function handler(req, res) {
+  if (req.method === 'POST') {
+    try {
+      // Create Checkout Sessions from body params.
+      const session = await stripe.checkout.sessions.create({
+        line_items: [
+          {
+            // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
+            price: '{{PRICE_ID}}',
+            quantity: 1,
+          },
+        ],
+        mode: 'payment',
+        success_url: `${req.headers.origin}/?success=true`,
+        cancel_url: `${req.headers.origin}/?canceled=true`,
+        automatic_tax: {enabled: true},
+      });
+      res.redirect(303, session.url);
+    } catch (err) {
+      res.status(err.statusCode || 500).json(err.message);
+    }
+  } else {
+    res.setHeader('Allow', 'POST');
+    res.status(405).end('Method Not Allowed');
+  }
+}

@@ -1,423 +1,193 @@
 /* Header Section */
-.header{
-  /* Header */
+.header {
   box-sizing: border-box;
-
-  /* Auto layout */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 30px;
+  padding: 0 30px;
   gap: 100px;
-
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 64px;
-  left: 0px;
-  top: 0px;
-
-  /* FCFCFD */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   background: #FCFCFD;
-  /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
 }
 
-  /* iPanda */
-.logo{
-  margin: 10 auto;
+/* Logo */
+.logo {
+  margin: 10px;
   width: 81px;
   height: 29px;
-
   font-family: 'SF Pro Display';
-  font-style: normal;
   font-weight: 900;
   font-size: 24px;
   line-height: 29px;
-  /* identical to box height */
-
-  /* 1D1D1F */
   color: #1D1D1F;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
-/* Sample Preview */
+/* Sample Preview Button */
 .sample-preview-button {
   font-family: 'SF Pro Display';
-  font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
   box-sizing: border-box;
   background: #FCFCFD;
-
-  /* Auto layout */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  display: block;
   padding: 11px 45px;
-  gap: 5px;
-
   margin: 0 auto;
   width: 200px;
   height: 36px;
-
-  /* 1D1D1F */
   border: 1px solid #1D1D1F;
   border-radius: 10px;
-
 }
-
 
 body {
   font-family: Arial, sans-serif;
   background-color: white;
 }
 
-/* Introdution Section */
-.intro{
-  /* With iPanda, you can create personalized resume and cover letter for a specific job. If you want to apply for 10 jobs, you get a personalized resume and cover letter for each. 1. Copy and paste your resume. 2. Copy and paste job ads. 3. Click "Generate." 4. Pay 5. You receive a personalized resume and cover letter, ready to download in PDF and Word format. */
-
-  position: absolute;
+/* Introduction Section */
+.intro {
+  position: relative;
   width: 982px;
   height: 108px;
   left: 120px;
-  top: 60px;
-
+  top: 20px;
   font-family: 'SF Pro Display';
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  /* or 129% */
-
   color: #000000;
 }
 
-
 /* Copy and Paste Section */
-.paste-resume h2{
-  /* Copy and paste your original resume */
-
-  position: absolute;
+.paste-resume h2 {
+  position: relative;
   width: 360px;
   height: 24px;
   left: 120px;
-  top: 200px;
-
+  top: 40px;
   font-family: 'SF Pro Display';
-  font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  /* identical to box height */
-
-  /* 1D1D1F */
   color: #1D1D1F;
 }
 
-.copy-paste p{
-/* For each job ad (need pay $2.5 AUD), you will receive a unique resume and cover letter */
-
-position: absolute;
-width: 501px;
-height: 18px;
-left: 450px;
-top: 208px;
-
-font-family: 'SF Pro Display';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height, or 129% */
-
-/* 1D1D1F */
-color: #1D1D1F;
-}
 .text-resume {
-  /* Frame 1 */
-
-  /* Auto layout */
   position: absolute;
-  flex-direction: row;
-  align-items: flex-start;
   padding: 20px;
   gap: 10px;
-  isolation: isolate;
-
-  position: absolute;
   width: 70%;
-  height: 30%;
   left: 120px;
-  top: 250px;
-
+  top: 300px;
   background: rgba(0, 0, 0, 0.02);
   border-radius: 16px;
-
-
-  /* A detailed resume is preferred. Include information such as education, courses, employment history with dates, job descriptions, certifications, volunteer experience, and projects. */
-
-  /* width: 1160px;
-  height: 260px; */
-
   font-family: 'SF Pro Display';
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  /* or 129% */
-
-  /* 1D1D1F */
   color: #1D1D1F;
-
   opacity: 0.4;
+  height: 25%;
 }
 
-.paste-job-text h2{
-  /* Copy and paste job advertisements */
+.paste-job{
+  margin-top:auto;
+}
 
-  position: absolute;
+.paste-job-text h2 {
+  position: relative;
   width: 360px;
   height: 24px;
   left: 120px;
-  top: 520px;
-
-
+  top: 330px;
   font-family: 'SF Pro Display';
-  font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  /* identical to box height */
-
-  /* 1D1D1F */
   color: #1D1D1F;
 }
 
-.paste-job-text p{
-  /* For each job ad (need pay $2.5 AUD), you will receive a unique resume and cover letter */
-
-  /* position: absolute; */
+.paste-job-text p {
+  position: relative;
   width: 501px;
   height: 18px;
   left: 481px;
-  top: 527px;
-
+  top: 294px;
   font-family: 'SF Pro Display';
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  /* identical to box height, or 129% */
-
-  /* 1D1D1F */
   color: #1D1D1F;
 }
 
-
-
-.job-ad-input-1 {
-  /* Frame 1 */
-
-  /* Auto layout */
-  position: absolute;
-  flex-direction: row;
-  align-items: flex-start;
+.job-area{
+  margin-top: 10px;
+}
+.job-ad-input {
+  /* display: flex; */
+  /* align-items: flex-start; */
   padding: 20px;
   gap: 10px;
-  isolation: isolate;
-
-  position: absolute;
-  width: 33%;
+  width: 32%;
   height: 15%;
-  left: 120px;
-  top: 580px;
-
-  /* background: rgba(0, 0, 0, 0.02); */
+  margin-top: 300px;
   border-radius: 16px;
-  border-width: 1px;
-  border-color: #1D1D1F;
-  border-style: solid;
-  /* border-color: transparent; */
-
-
-  /* A detailed resume is preferred. Include information such as education, courses, employment history with dates, job descriptions, certifications, volunteer experience, and projects. */
-
-  /* width: 1160px;
-  height: 260px; */
-
+  border: 1px solid #1D1D1F;
   font-family: 'SF Pro Display';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  /* or 129% */
-
-  /* 1D1D1F */
+  font-size: 1rem;
+  line-height: 1.29;
   opacity: 0.4;
 }
 
-.job-ad-input-2 {
-  /* Frame 1 */
+.job-ad-input:nth-child(1) {
+  margin-left: 113px;
+}
 
-  /* Auto layout */
-  position: absolute;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 20px;
-  gap: 10px;
-  isolation: isolate;
-
-  position: absolute;
-  width: 33%;
-  height: 15%;
-  right: 270px;
-  top: 580px;
-
-  /* background: rgba(0, 0, 0, 0.02); */
-  border-radius: 16px;
-  border-width: 1px;
-  border-color: #1D1D1F;
-  border-style: solid;
-  /* border-color: transparent; */
-
-
-  /* A detailed resume is preferred. Include information such as education, courses, employment history with dates, job descriptions, certifications, volunteer experience, and projects. */
-
-  /* width: 1160px;
-  height: 260px; */
-
-  font-family: 'SF Pro Display';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  /* or 129% */
-
-  /* 1D1D1F */
-  opacity: 0.4;
+.job-ad-input:nth-child(2) {
+  margin-left: 48px;
 }
 
 .add-more-jobs {
-  /* + one more job ad */
-  position: absolute;
-  flex-direction: row;
-  align-items: flex-start;
+  position: relative;
   padding: 20px;
   gap: 10px;
-  isolation: isolate;
-
-  position: absolute;
   width: 36%;
   height: 15%;
-  left: 120px;
-  top: 750px;
-
-  /* background: rgba(0, 0, 0, 0.02); */
+  left: 115px;
+  top: 50px;
   border-radius: 16px;
-  border-width: 1px;
-  border-color: #1D1D1F;
-  border-style: solid;
-  /* border-color: transparent; */
-
-
-  /* A detailed resume is preferred. Include information such as education, courses, employment history with dates, job descriptions, certifications, volunteer experience, and projects. */
-
-  /* width: 1160px;
-  height: 260px; */
-
+  border: 1px solid #1D1D1F;
   font-family: 'SF Pro Display';
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  /* or 129% */
-
-  /* 1D1D1F */
   opacity: 0.4;
-
 }
 
-.generate{
-  /* btn */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 11px 90px;
-gap: 10px;
-
-position: relative;
-width: 240px;
-height: 48px;
-left: 1000px;
-top: 900px;
-
-/* 1D1D1F */
-background: #1D1D1F;
-opacity: 0.2;
-border-radius: 16px;
-
-
-/* next step */
-
-width: 60px;
-height: 18px;
-
-font-family: 'SF Pro Display';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height, or 129% */
-
-/* FCFCFD */
-color: #FCFCFD;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-}
-
-
-
-
-/* 
-
-.container {
-  width: 80%;
-  margin: auto;
-}
-h1, h2 {
-  color: #333;
-}
-.textarea-container {
-  margin-bottom: 20px;
-}
-textarea {
-  width: 100%;
-  height: 150px;
-  padding: 10px;
-  margin-top: 10px;
+.generate {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 90px;
+  gap: 10px;
+  position: relative;
+  width: 240px;
+  height: 48px;
+  left: 900px;
+  top: 0px;
+  background: #1D1D1F;
+  opacity: 0.2;
+  border-radius: 16px;
+  font-family: 'SF Pro Display';
+  font-weight: 700;
   font-size: 14px;
   line-height: 18px;
-  font-family: 'SF Pro Display', sans-serif;
-}
-.add-job-btn {
-  display: block;
-  margin-top: 10px;
-  text-align: center;
-  background: #eee;
-  padding: 10px;
-  cursor: pointer;
-} */
+  color: #FCFCFD;
+};
+
+
+

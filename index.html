@@ -6,6 +6,7 @@
     <title>iPanda Resume Service</title>
     <!-- stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
 
@@ -44,26 +45,34 @@
         <h2>2. Copy and paste job advertisements</h2>
         <p>For each job ad (need pay $2.5 AUD), you will receive a unique resume and cover letter</p>
       </div> 
+      <div class="job-area">
+        <div class="job-ad-container">
+            <input type="text" class="job-ad-input" id = "job-ad-input" placeholder="Job_01 Please paste everything on the job ad">
+            <input type="text" class="job-ad-input" id = "job-ad-input" placeholder="Job_02 Please paste everything on the job ad">
+        </div>
+      </div>
+      <div class="add-more">
+        <button type="submit"  class="add-more-jobs" onclick="addJobAd()">+ Add More Job Ads</button>
+      </div>
+      <div class="submit-button">
+        <button type="submit" class="generate" id="generate">Generate</button>
+
+      </div>
     </div>
   </div>
   <!-- Copy Paste End -->
 
   <!-- Job Area Begin -->
-  <div class="job-area">
-    <div class="job-ad-container">
-      <input type="text" class="job-ad-input-1" placeholder="Job_01 Please paste everything on the job ad">
-      <input type="text" class="job-ad-input-2" placeholder="Job_02 Please paste everything on the job ad">
-    </div>
-  </div>
+
+      
+    <!-- <div class="job-ad-container"> -->
+      <!-- <input type="text" class="job-ad-input-1" placeholder="Job_01 Please paste everything on the job ad">
+      <input type="text" class="job-ad-input-2" placeholder="Job_02 Please paste everything on the job ad"> -->
+    <!-- </div> -->
+
   <!-- Job Area End -->
 
-  <div class="add-more">
-    <button type="submit"  class="add-more-jobs">+ Add More Job Ads</button>
-  </div>
 
-  <div class="submit-button">
-    <button type="submit"  class="generate">Generate</button>
-  </div>
 
     <!-- jquery -->
     <script src="assets/js/jquery.js"></script>
